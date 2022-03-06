@@ -1,6 +1,6 @@
-# I create my personal website in this repository
+## I create my personal website in this repository
 
-# If u want to run this project follow this directions
+## If u want to run this project follow this directions
 
 ## Project setup
 ```
