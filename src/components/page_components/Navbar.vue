@@ -1,5 +1,4 @@
 <template>
-
     <div class="navbar-main">
         <div v-for="route in routes" :key="route.name" class="navbar-routes">
             <div class="route-icons">
@@ -11,7 +10,6 @@
             <BiDarkMode />
         </div>
     </div>
-
 </template>
 
 <script lang="ts">
@@ -33,6 +31,20 @@
                 iconColor: '#1d1d1d'
             };
         },
+        mounted(){
+            window.addEventListener('scroll', this.handleScroll);
+        },
+        methods: {
+            handleScroll(){
+                let element = document.querySelector('.navbar-main') as HTMLElement;
+                if(window.scrollY > 300){
+                    element.style.position = 'fixed';
+                }
+                else if(window.scrollY === 0){
+                    element.style.position = 'relative';
+                }
+            },
+        },
         watch: {
             '$store.state.darkMode': function (newVal: boolean) {
                 this.iconColor = newVal ? '#fafafa' : '#1d1d1d';
@@ -51,6 +63,8 @@
         width: 100%;
         padding: 1vw 2vw;
         @include box-shadow(0px, 0px, 5px);
+        flex:0 0 auto;
+        position: relative;
 
         .navbar-routes {
             @include flex-container(row, center, center, nowrap);

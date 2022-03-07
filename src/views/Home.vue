@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" id="home">
     <Navbar :routes="routes" />
   </div>
 </template>
@@ -45,3 +45,12 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="scss">
+@import '@/scss/index.scss';
+
+ .home{
+   width: 100%;
+   @include flex-container(column, stretch, flex-start, nowrap);
+ }
+</style>
