@@ -15,7 +15,6 @@
   html{
     background-color: $bg-color; 
     color: $text-color;
-    @include transition(background-color .5s ease-in-out);
   }
 
   #app {
