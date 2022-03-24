@@ -1,6 +1,6 @@
 <template>
   <div class="home" id="home">
-    <Navbar :routes="routes" />
+    <Navbar :routes="routes" :hasIcon="true" />
   </div>
 </template>
 

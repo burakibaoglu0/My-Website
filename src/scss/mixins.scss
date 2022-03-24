@@ -92,3 +92,18 @@
     &::-moz-placeholder          {@content};
     &:-ms-input-placeholder      {@content}; 
 }
+
+@mixin selection($color, $background) {
+    &::selection {
+        color: $color;
+        background: $background;
+    }
+    &::-moz-selection {
+        color: $color;
+        background: $background;
+    }
+    &::-webkit-selection {
+        color: $color;
+        background: $background;
+    }
+}
